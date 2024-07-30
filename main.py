@@ -115,12 +115,6 @@ async def roll(ctx, *, arg: str):
     except Exception as e:
         await ctx.send(f"Hata: {e}")
 
-
-# Additional Command
-@bot.command()
-async def merhaba(ctx):
-    await ctx.send("Merhabana merhaba kardeş")
-
 # Timer
 @bot.command()
 async def timer(ctx, timeInput: str):
