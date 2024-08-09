@@ -7,7 +7,7 @@ from discord import Intents
 from discord.ext import commands
 from functions.roll_dice import roll_dice_command
 from functions.countdown import countdown_command
-from functions.paket_oyunu import paket_oyunu_command
+from functions.word_game import word_game_func
 
 # LOAD TOKEN
 load_dotenv()
@@ -21,7 +21,7 @@ bot = commands.Bot(command_prefix="/", intents=intents)
 # Load commands from functions
 bot.add_command(roll_dice_command)
 bot.add_command(countdown_command)
-bot.add_command(paket_oyunu_command)
+bot.add_command(word_game_func)
 
 # Startup for bot
 @bot.event
