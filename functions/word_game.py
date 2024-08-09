@@ -23,6 +23,8 @@ def load_packages():
 # Load Packages
 packs = load_packages()
 
+# Define the command using the decorator
+@commands.command(name='wordGame')
 async def word_game_func(ctx):
     bot = ctx.bot  # Get the bot instance from the context
 
@@ -82,7 +84,7 @@ async def word_game_func(ctx):
                 participants.remove(agent)
 
                 agent_user = await bot.fetch_user(agent)
-                await agent_user.send("You´re agent!")
+                await agent_user.send("You're the agent!")
                 word = random.choice(packs[selected_package])
                 for user in participants:
                     users = await bot.fetch_user(user)
@@ -97,6 +99,3 @@ async def word_game_func(ctx):
     play_button.callback = play_callback
 
     await ctx.send("Welcome to the Word Pack game! Would you like to see the packs or start the game?", view=view)
-
-# Create a command for `word_game_command`
-word_game_command = commands.Command(word_game_func, name='wordGame')
