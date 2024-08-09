@@ -25,12 +25,12 @@ A Discord bot for managing interactive word games with various word packages. Th
    ```bash
    pip install -r requirements.txt
    ```
-3. **Set up environment variables:**
+3. **Set up environment variables:**<br>
    Create a .env file in the root directory and add your Discord bot token:
    ```bash
    DISCORD_TOKEN=your-discord-bot-token
    ```
-4. **Add your word packages:**
+4. **Add your word packages:**<br>
    Place your word packages as .txt files in the word-packages/ directory. Each line in the text file should contain one word.
 5. **Run the bot:**
    ```bash
